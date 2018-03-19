@@ -12,6 +12,7 @@ class SplashViewController: UIViewController, TwitterLoginDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TwitterClientApi.sharedService?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +26,15 @@ class SplashViewController: UIViewController, TwitterLoginDelegate {
     
     func continueLogin() {
         //если пользователь не авторизован
-        self.goToLogin();
+        if (User.currentUser == nil) {
+            self.goToLogin();
+        } else {
+            self.goToApp()
+        }
+    }
+    
+    func goToApp() {
+        self.performSegue(withIdentifier: "TabTapeedViewSegue", sender: self)
     }
     
     func goToLogin() {

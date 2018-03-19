@@ -34,6 +34,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLoginBtnClick(_ sender: UIButton) {
-        
+        TwitterClientApi.sharedService?.login({
+            self.dismiss(animated: true, completion: {
+                
+            })
+        },failure: {(error) in
+                                        
+        })
     }
 }
