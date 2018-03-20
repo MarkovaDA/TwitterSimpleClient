@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onBtnLogOutClick(_ sender: UIButton) {
+    /*@IBAction func onBtnLogOutClick(_ sender: UIButton) {
         TwitterClientApi.sharedService?.logout()
-    }
+    }*/
 }

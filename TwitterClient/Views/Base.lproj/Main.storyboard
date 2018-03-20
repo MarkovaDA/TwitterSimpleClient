@@ -116,38 +116,48 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ClN-SQ-Qil" kind="relationship" relationship="viewControllers" id="LeO-ew-Xkv"/>
+                        <segue destination="vlX-92-ziO" kind="relationship" relationship="viewControllers" id="LeO-ew-Xkv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkK-t8-VKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1254" y="-537"/>
         </scene>
-        <!--Item-->
+        <!--Home View Controller-->
         <scene sceneID="g9l-3a-tgu">
             <objects>
                 <viewController id="ClN-SQ-Qil" customClass="HomeViewController" customModule="TwitterClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iBh-oy-cAp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VM4-wJ-r6Q">
-                                <rect key="frame" x="180" y="257" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="onBtnLogOutClick:" destination="ClN-SQ-Qil" eventType="touchUpInside" id="a6i-Bw-H3N"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ba8-Dz-BiL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6AT-IC-dVy"/>
+                    <navigationItem key="navigationItem" id="l28-lm-b6A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFN-I0-K2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="-537"/>
+            <point key="canvasLocation" x="2135" y="214"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="rbq-uh-qfw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vlX-92-ziO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6AT-IC-dVy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V9T-lP-SPZ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.22078424690000001" green="0.63118094209999998" blue="0.95130306480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ClN-SQ-Qil" kind="relationship" relationship="rootViewController" id="7Rt-Pt-mpa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k81-E2-pey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2136" y="-537.192118226601"/>
         </scene>
     </scenes>
     <resources>
